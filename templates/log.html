@@ -1,0 +1,41 @@
+{% extends "template.html" %}
+{% block content %}
+
+    {% if error %}
+        <p>Cannot load the user Error: {{ error }}
+    {% endif %}
+<div class="jumbotron container">
+    <h2 style="float:center">Login</h2>
+<div class="row">
+    <div class="col-lg-6 col-sm-12"  style="margin-left: 25px">
+        <form method="POST">
+            <div class="form-group">
+                <label for="exampleInputName">Name</label>
+                <input type="text" class="form-control" placeholder="username" name="username" value="{{ request.form.username }}" />
+                 <label for="exampleInputPassword1">Password</label>
+                <input type="password" class="form-control" placeholder="password" name="password" />
+                <input type="submit" style="margin-top: 10px" class="btn btn-success" value="Login" />
+                or
+            </div>
+        </form>
+        <p>
+    Or click here to sign in using
+   <a class="btn btn-lg btn-info" href="\google_direct">Google+</a>
+</p></div>
+    </div>
+
+
+
+
+</div>
+
+    {% for message in get_flashed_messages() %}
+        <div class="flash_block">
+            <div class="box">
+                {{ message }}
+            </div>
+        </div>
+    {% endfor %}
+{% endblock %}
+
+

@@ -1,0 +1,21 @@
+{% extends "template.html" %}
+{% block content %}
+    <div class=" jumbotron container">
+        <h2>Register a new account</h2>
+        <form method="POST">
+            <div class="form-group">
+                <label for="exampleInputName">Name</label>
+                <input type="text" class="form-control" placeholder="username" name="username" /><p />
+                <label for="exampleInputPassword1">Password</label>
+                <input type="password" class="form-control" placeholder="password" type="password" name="password" /> <p />
+                <label for="exampleInputEmail1">Email address</label>
+                <input type="text"  placeholder="yourid@domain.com" class="form-control" name="email"/><p />
+                <button type="submit"  class="btn btn-success" value="Register" >Submit</button>
+            </div>
+        </form>
+            or sign in using Google plus account
+            <a class="btn btn-lg btn-info" href="\google_direct">Google+</a>
+    </div>
+    </div>
+    <p>
+{% endblock %}

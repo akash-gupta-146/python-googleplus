@@ -1,0 +1,18 @@
+{% extends "template.html" %}
+{% block content %}
+    <div class="container jumbotron">
+    <h2 center>My Text!</h2>
+        <form method="POST" action="\save">
+            <textarea name="text_data" class="form-control" rows="3">{{tData}}</textarea>
+            <div class="row" style="margin-top:10px">
+                <div class="col-lg-6 col-sm-12">
+                    <p><input type="submit" style="float:right" class="btn btn-info btn-lg" role="button" value="save"></input></p>
+                </div>
+                <div class="col-lg-6 col-sm-12">
+                    <p><a class="btn btn-warning btn-lg" href="\" role="button">Close</a></p>
+                </div>
+            </div>
+        </form>
+    </div>
+
+{% endblock %}
